@@ -1,0 +1,197 @@
+
+ body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 250px;
+            width: 100%;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+
+
+/* ================= Summary Cards ================= */
+
+.summary-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.summary-card{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border:1px solid #eee;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+
+    transition:.3s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+.card-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+}
+
+.icon{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+
+/* Icon Colors */
+
+.balance{
+
+    background:#efebff;
+
+    color:#5d5fef;
+
+}
+
+.income{
+
+    background:#e8fff1;
+
+    color:#1fb76a;
+
+}
+
+.expense{
+
+    background:#ffecec;
+
+    color:#ff4d4d;
+
+}
+
+.month{
+
+    background:#eaf4ff;
+
+    color:#3399ff;
+
+}
+
+.summary-card h6{
+
+    color:#666;
+
+    margin:0;
+
+    font-size:15px;
+
+}
+
+.summary-card h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.summary-card h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.summary-card small{
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+.positive{
+
+    color:#18b66d;
+
+    font-size:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin:0;
+
+}
+
+.negative{
+
+    color:#ff4b4b;
+
+    font-size:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    margin:0;
+
+}
