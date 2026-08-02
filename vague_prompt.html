@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+<div class="w-full max-w-2xl bg-white rounded-2xl shadow-lg p-8">
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">
+        Add Transaction
+    </h1>
+
+    <form id="transactionForm" novalidate>
+
+        <!-- Amount -->
+        <div class="mb-5">
+            <label for="amount" class="block font-medium text-gray-700 mb-2">
+                Amount
+            </label>
+
+            <input
+                id="amount"
+                name="amount"
+                type="number"
+                min="0"
+                step="0.01"
+                class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                aria-describedby="amountError"
+            >
+
+            <p
+                id="amountError"
+                class="text-red-600 text-sm mt-1"
+                role="alert"
+                aria-live="polite">
+            </p>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-5">
+            <label for="description" class="block font-medium text-gray-700 mb-2">
+                Description
+            </label>
+
+            <input
+                id="description"
+                name="description"
+                type="text"
+                class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                aria-describedby="descriptionError"
+            >
+
+            <p
+                id="descriptionError"
+                class="text-red-600 text-sm mt-1"
+                role="alert"
+                aria-live="polite">
+            </p>
+        </div>
+
+        <!-- Category -->
+        <div class="mb-5">
+            <label for="category" class="block font-medium text-gray-700 mb-2">
+                Category
+            </label>
+
+            <select
+                id="category"
+                class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                aria-describedby="categoryError"
+            >
+                <option value="">Select Category</option>
+                <option>Food</option>
+                <option>Transport</option>
+                <option>Shopping</option>
+                <option>Bills</option>
+                <option>Salary</option>
+                <option>Entertainment</option>
+                <option>Health</option>
+                <option>Other</option>
+            </select>
+
+            <p
+                id="categoryError"
+                class="text-red-600 text-sm mt-1"
+                role="alert"
+                aria-live="polite">
+            </p>
+        </div>
+
+        <!-- Date -->
+        <div class="mb-5">
+            <label for="date" class="block font-medium text-gray-700 mb-2">
+                Date
+            </label>
+
+            <input
+                id="date"
+                type="date"
+                class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
+                aria-describedby="dateError"
+            >
+
+            <p
+                id="dateError"
+                class="text-red-600 text-sm mt-1"
+                role="alert"
+                aria-live="polite">
+            </p>
+        </div>
+
+        <!-- Transaction Type -->
+        <div class="mb-6">
+
+            <label class="block font-medium text-gray-700 mb-3">
+                Transaction Type
+            </label>
+
+            <div class="flex gap-6">
+
+                <label class="flex items-center gap-2">
+                    <input
+                        type="radio"
+                        name="type"
+                        value="Income"
+                    >
+                    Income
+                </label>
+
+                <label class="flex items-center gap-2">
+                    <input
+                        type="radio"
+                        name="type"
+                        value="Expense"
+                    >
+                    Expense
+                </label>
+
+            </div>
+
+            <p
+                id="typeError"
+                class="text-red-600 text-sm mt-1"
+                role="alert"
+                aria-live="polite">
+            </p>
+
+        </div>
+
+        <button
+            type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition">
+            Add Transaction
+        </button>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
